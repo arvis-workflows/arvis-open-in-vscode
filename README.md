@@ -2,7 +2,7 @@
 
 arvis workflow to open in VSCode.
 
-![Screenshot](./assets/arvis-open-in-vscode.png)
+![Screenshot](./assets/alfred-open-in-vscode.png)
 
 ## Feature
 
