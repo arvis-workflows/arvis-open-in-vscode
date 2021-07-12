@@ -1,0 +1,47 @@
+{
+  "name": "arvis-open-in-vscode",
+  "version": "0.0.2",
+  "description": "Arvis workflow to open in VSCode",
+  "main": "index.js",
+  "keywords": [
+    "arvis",
+    "arvish",
+    "arvis-workflow",
+    "workflow",
+    "vscode",
+    "finder"
+  ],
+  "author": "vivaxy <xyxuye2007@126.com>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "arvish": ">=0.5.4",
+    "execa": "^5.1.1",
+    "fast-glob": "^3.0.4"
+  },
+  "scripts": {
+    "release": "standard-version && npm publish --access=public && git push --follow-tags",
+    "postinstall": "arvish-init",
+    "preuninstall": "arvish-cleanup",
+    "prepublishOnly": "arvish-prepublish",
+    "postpublish": "# pinst --enable"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.0",
+    "@commitlint/config-conventional": "^12.0.0",
+    "husky": "6",
+    "lint-staged": "^11.0.0",
+    "pinst": "^2.1.4",
+    "prettier": "^2.2.1",
+    "standard-version": "^9.1.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,css,less,json,md,html,yml,yaml,pcss,jsx,tsx}": [
+      "prettier --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

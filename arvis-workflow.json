@@ -1,0 +1,32 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+    "creator": "vivaxy",
+    "name": "arvis-open-in-vscode",
+    "enabled": true,
+    "description": "Arvis workflow to open in VSCode",
+    "readme": "",
+    "defaultIcon": "icon.png",
+    "version": "0.0.2",
+    "webAddress": "https://github.com/arvis-workflows/arvis-open-in-vscode",
+    "variables": {
+        "wds": ""
+    },
+    "commands": [
+        {
+            "type": "scriptFilter",
+            "title": "Open Project in VSCode",
+            "command": "code",
+            "scriptFilter": "node index.js {query}",
+            "runningSubtext": "Hold on a sec until script work is done...",
+            "argType": "optional",
+            "withspace": true,
+            "actions": [
+                {
+                    "type": "script",
+                    "modifiers": "normal",
+                    "script": "node open.js {query}"
+                }
+            ]
+        }
+    ]
+}
